@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
+import {Link} from "react-router-dom";
 
 const Home = () => {
 
@@ -11,7 +12,7 @@ const Home = () => {
                 <h2>
                     Your Ip
                 </h2>
-                <p>{publicIp}</p>
+                <h3>{publicIp}</h3>
             </div>
 
             <div className='VPN'>
@@ -19,7 +20,7 @@ const Home = () => {
                 <p>While using our chat we recommend masking your IP address.
                      The Ip address is the only way to link you to your chats through this service.
                       Otherwise people online can find where you are!</p>
-                <button>Learn More</button>   
+                <button id="Vpn"><Link to="/vpn">Learn More</Link></button>
             </div>
 
             <div>
@@ -28,7 +29,7 @@ const Home = () => {
                 </h2>
                 <input type="text" id="roomId" name="roomId"></input>
                 <button>Join</button>   
-                <p className="VPN">By clicking join you agree to the terms of service.</p>
+                <p className="VPN">By clicking join you agree to the <Link to="/tos">Terms of Service</Link></p>
             </div>
         </div>
     )
